@@ -37,7 +37,7 @@ end
 #### CHOIX CLIENT ####
 print "Choisis un chiffre : "
 premier_chiffre = gets.chomp
-print "Choisi un second chiffre : "
+print "Choisis un second chiffre : "
 second_chiffre = gets.chomp
 print "\n"
 
