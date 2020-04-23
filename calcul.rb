@@ -1,70 +1,58 @@
-#### OPÉRATIONS À EFFECTUER ####
-def multiplier(premier_chiffre, second_chiffre)
-  premier_chiffre.to_f * second_chiffre.to_f
+
+puts "Bonjour, voilà mon exercice de multiplication."
+puts "Deux chiffres aléatoirs seront générés, à toi de trouver le bon résultat."
+
+nb1 = rand 10
+nb2 = rand 10
+
+
+calcul = nb1 * nb2
+puts "Combien fait #{nb1} * #{nb2} ? "
+answer = gets.chomp.to_i
+
+
+
+if answer == calcul
+  puts "Oui"
+else
+  puts "Non c'était #{nb1 * nb2}"
 end
 
-def diviser(premier_chiffre, second_chiffre)
-  premier_chiffre.to_f / second_chiffre.to_f
+20.times {print ("--")}
+print"\n"
+
+
+puts "Maintenant divisons."
+
+nb3 = rand 5..10
+nb4 = rand 1..10
+
+calcul_2 = nb3 / nb4
+puts "combien font #{nb3} / #{nb4} ? "
+answer_2 = gets.chomp.to_f
+
+if calcul_2 == answer_2
+  puts "Oui"
+else
+  puts "Non, c'était #{nb3 / nb4}"
 end
 
-def modulo(premier_chiffre, second_chiffre)
-  premier_chiffre.to_f % second_chiffre.to_f
+20.times {print ("--")}
+print"\n"
+
+calcul_3 = nb1 - nb2
+puts "Combien fait #{nb1} - #{nb2} ? "
+
+answer_3 = gets.chomp.to_i
+
+if answer_3 == calcul_3
+  puts "Oui"
+else
+  puts "Non, c'était #{nb1 - nb2}"
 end
 
-def puissance(premier_chiffre, second_chiffre)
-   premier_chiffre.to_f ** second_chiffre.to_f
-end
 
-def soustraire(premier_chiffre, second_chiffre)
-     premier_chiffre.to_f - second_chiffre.to_f
-end
 
-def addition(premier_chiffre, second_chiffre)
-    premier_chiffre.to_f + second_chiffre.to_f
-end
-#### BONJOUR ####
-40.times do
-  print ('-')
-end
- print "\n"
 
-puts "Bonjour, bienvenue sur ma calculette !"
-
-40.times do
-  print ('-')
-end
- print "\n"
-#### CHOIX CLIENT ####
-print "Choisis un chiffre : "
-premier_chiffre = gets.chomp
-print "Choisis un second chiffre : "
-second_chiffre = gets.chomp
-print "\n"
-
-puts "Que veux tu faire comme calcul ?"
-print "\n"
-print "1) Multiplication, 2) Division, 3) Modulo, 4) Puissance, 5) Soustraction, 6) Additionn : "
-choix = gets.chomp
-
-#### CONDITIONS POUR CALCULER ####
- if choix.to_i == 1
-   puts "Multiplication : #{premier_chiffre} * #{second_chiffre} = #{multiplier(premier_chiffre, second_chiffre)}"
-
- elsif choix.to_i == 2
-   puts "Division : #{premier_chiffre} / #{second_chiffre} = #{diviser(premier_chiffre, second_chiffre)}"
-
- elsif choix.to_i == 3
-   puts "Modulo : #{premier_chiffre} % #{second_chiffre} = #{modulo(premier_chiffre, second_chiffre)}"
-
- elsif choix.to_i == 4
-   puts "Puissance : #{premier_chiffre} puissance #{second_chiffre} = #{puissance(premier_chiffre, second_chiffre)}"
-
- elsif choix.to_i == 5
-    puts "Soustraction : #{premier_chiffre} - #{second_chiffre} = #{soustraire(premier_chiffre, second_chiffre)}"
-
- elsif choix.to_i == 6
-    puts "Addition : #{premier_chiffre} + #{second_chiffre} = #{addition(premier_chiffre, second_chiffre)}"
-
- else
-   puts "Choix impossible."
- end
+##Génère deux chiffres aléatoires
+###
